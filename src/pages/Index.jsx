@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Box, Heading, Input, List, ListItem, VStack, HStack, IconButton, useToast } from "@chakra-ui/react";
-import Footer from "../components/Footer";
+import { Box, Heading, Input, Button, List, ListItem, ListIcon, VStack, HStack, IconButton, useToast } from "@chakra-ui/react";
 import { FaPlus, FaTrash } from "react-icons/fa";
 
 const Index = () => {
@@ -38,7 +37,7 @@ const Index = () => {
 
   return (
     <VStack p={8}>
-      <Heading mb="8">Todo App ❤️</Heading>
+      <Heading mb="8">Todo App</Heading>
       <HStack>
         <Input value={inputValue} onChange={handleInputChange} onKeyPress={handleKeyPress} placeholder="Add a new task..." />
         <IconButton icon={<FaPlus />} onClick={addTodo} colorScheme="blue" aria-label="Add todo" />
@@ -53,7 +52,6 @@ const Index = () => {
           </ListItem>
         ))}
       </List>
-      <Footer />
     </VStack>
   );
 };
